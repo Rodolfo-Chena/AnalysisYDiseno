@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import mx.uam.ayd.proyecto.presentacion.agregarUsuario.ControlAgregarUsuario;
 import mx.uam.ayd.proyecto.presentacion.listarUsuarios.ControlListarUsuarios;
+import mx.uam.ayd.proyecto.presentacion.agregarGrupo.ControlAgregarGrupo;
 
 /**
  * Esta clase lleva el flujo de control de la ventana principal
@@ -20,6 +21,8 @@ public class ControlPrincipal {
 	
 	@Autowired
 	private ControlListarUsuarios controlListarUsuarios;
+	@Autowired
+	private ControlAgregarGrupo controlAgregarGrupo;
 
 	@Autowired
 	private VentanaPrincipal ventana;
@@ -49,5 +52,10 @@ public class ControlPrincipal {
 	 */
 	public void listarUsuarios() {
 		controlListarUsuarios.inicia();
+	}
+	public void agregarGrupo() {
+		
+		controlAgregarGrupo.inicia();
+		
 	}
 }

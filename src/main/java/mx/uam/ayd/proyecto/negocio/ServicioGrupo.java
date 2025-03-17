@@ -40,5 +40,10 @@ public class ServicioGrupo {
 				
 		return grupos;
 	}
+	public void guardarGrupo(String nombre) {
+        Grupo grupo = new Grupo();
+        grupo.setNombre(nombre);
+        grupoRepository.save(grupo);
+    }
 
 }
